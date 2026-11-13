@@ -2,8 +2,12 @@ name: Daily stock picker
 
 on:
   schedule:
-    - cron: "30 22 * * 1-5"   # 6:30am Malaysia time (after the US close)
-    - cron: "15 10 * * 1-5"   # 6:15pm Malaysia time (after Bursa closes)
+    # Full runs (also look for new stocks to add): 6:30am and 6:15pm Malaysia time, weekdays
+    - cron: "30 22 * * 1-5"
+    - cron: "15 10 * * 1-5"
+    # Quick hourly refresh of prices & scores while markets are open (times in UTC):
+    - cron: "5 1-9 * * 1-5"    # Bursa Malaysia session, 9am-5pm Malaysia time
+    - cron: "5 14-21 * * 1-5"  # US session, about 10:30pm-5am Malaysia time
   workflow_dispatch:           # "Run workflow" button for a manual refresh
 
 permissions:
@@ -30,13 +34,23 @@ jobs:
           path: reports/.info_cache.json
           key: info-${{ github.run_id }}
           restore-keys: info-
-      - run: python stock_picker.py --out reports
+      - name: Run the stock picker
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          if [ -z "$SCHEDULE" ] || [ "$SCHEDULE" = "30 22 * * 1-5" ] || [ "$SCHEDULE" = "15 10 * * 1-5" ]; then
+            python stock_picker.py --out reports
+          else
+            python stock_picker.py --out reports --no-discover --no-transcripts
+          fi
       - name: Keep a dated history in the repo
+        if: ${{ !github.event.schedule || github.event.schedule == '30 22 * * 1-5' || github.event.schedule == '15 10 * * 1-5' }}
         run: |
           git config user.name "picker-bot"
           git config user.email "picker-bot@users.noreply.github.com"
           git add reports/*.csv reports/auto_watchlist.json
           git commit -m "Scores $(date -u +%F)" || echo "nothing to commit"
+          git pull --rebase -q || true
           git push
       - name: Prepare site
         run: mkdir -p site && cp reports/latest.html site/index.html

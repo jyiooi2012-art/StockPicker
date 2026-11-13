@@ -108,6 +108,26 @@ ALIASES = {"1155.KL": "maybank", "1295.KL": "public bank pbb", "1023.KL": "cimb"
            "VOO": "s&p 500 sp500 vanguard", "QQQ": "nasdaq 100", "EWM": "malaysia etf", "GLD": "gold"}
 
 
+# TradingView lists Bursa stocks by short name, not by number
+TV_MYX = {"1155": "MAYBANK", "1295": "PBBANK", "1023": "CIMB", "5819": "HLBANK", "5347": "TENAGA", "5225": "IHH",
+          "6012": "MAXIS", "6947": "CDB", "4863": "TM", "0166": "INARI", "0097": "VITROX", "0128": "FRONTKN",
+          "0138": "MYEG", "5398": "GAMUDA", "4677": "YTL", "6742": "YTLPOWR", "8869": "PMETAL", "5211": "SUNWAY",
+          "3182": "GENTING", "5168": "HARTA", "7113": "TOPGLOV", "7084": "QL", "5183": "PCHEM", "3816": "MISC",
+          "1066": "RHBBANK", "1818": "BURSA", "4715": "GENM", "5681": "PETDAG", "6033": "PETGAS", "1961": "IOICORP",
+          "2445": "KLK", "5285": "SDG", "4197": "SIME", "1082": "HLFG", "6888": "AXIATA", "5296": "MRDIY",
+          "5246": "WPRTS", "0099": "SCICOM", "4324": "HENGYUAN", "5292": "UWC"}
+
+
+def tv_symbol(t: str) -> str:
+    """TradingView symbol for live price widgets/links ('' if unknown)."""
+    if t.endswith(".KL"):
+        name = TV_MYX.get(t[:-3])
+        return f"MYX:{name}" if name else ""
+    if t.startswith("^"):
+        return {"^GSPC": "FOREXCOM:SPXUSD", "^IXIC": "NASDAQ:IXIC", "^KLSE": "MYX:FBMKLCI"}.get(t, "")
+    return t.replace("-", ".")
+
+
 def search_text(t, r) -> str:
     base = t.split(".")[0]
     return html.escape(f"{t} {base} {r.get('name', '')} {r.get('sector', '')} {ALIASES.get(t, '')}".lower())
@@ -415,9 +435,10 @@ def regime(tab: pd.DataFrame, macro: list[dict]) -> str:
 def links(t: str) -> str:
     q = html.escape(t)
     yahoo = f"https://finance.yahoo.com/quote/{q}"
-    tv_sym = f"MYX:{t[:-3]}" if t.endswith(".KL") else t.replace("-", ".")
-    l = [f'<a href="{yahoo}" target="_blank">Yahoo</a>',
-         f'<a href="https://www.tradingview.com/symbols/{html.escape(tv_sym.replace(":", "-"))}/" target="_blank">TradingView</a>']
+    tv_sym = tv_symbol(t)
+    l = [f'<a href="{yahoo}" target="_blank">Yahoo</a>']
+    if tv_sym:
+        l.append(f'<a href="https://www.tradingview.com/symbols/{html.escape(tv_sym.replace(":", "-"))}/" target="_blank">TradingView</a>')
     if t.endswith(".KL"):
         l.append(f'<a href="https://www.bursamalaysia.com/market_information/announcements/company_announcement?keyword={q[:-3]}" target="_blank">Bursa</a>')
     elif not t.startswith("^"):
@@ -519,7 +540,10 @@ def detail_html(t, r, news):
         rows += [("Yearly fee", "" if not _num_ok(r.get("expense_ratio")) else f"{r['expense_ratio']:.2f}%"), ("Fund size", mcap_fmt(r.get("aum")))]
     grid = "".join(f"<div><span class='muted'>{k}</span><b>{v or '–'}</b></div>" for k, v in rows if v and v.strip(" /→–"))
     nb = newsmod.ticker_cell(news, t)
-    return (f"<div class='dgrid'>{grid}</div>"
+    sym = tv_symbol(t)
+    live = (f"<div class='tvbox' data-sym='{html.escape(sym)}'><span class='muted small'>Loading live price…</span></div>" if sym
+            else "<p class='muted small'>Live chart not available for this stock; use the Yahoo link below.</p>")
+    return (f"<h4 class='livehead'>🔴 Live price</h4>{live}<h4 class='livehead'>Numbers from the last update</h4><div class='dgrid'>{grid}</div>"
             f"<p><b>Tax for you (Malaysian resident):</b> {html.escape(r.get('tax_note', ''))}</p>"
             + (f"<p><b>In the news:</b> {nb}</p>" if nb else "")
             + f"<p><b>Research it:</b> {links(t)}</p>")
@@ -609,7 +633,11 @@ def render_html(tab: pd.DataFrame, macro: list[dict], top: int, demo: bool, news
                 shorts: dict | None = None, watchlist: list[str] | None = None, tags: dict | None = None,
                 discovery_html: str = "") -> str:
     tags = tags or {}
-    now = dt.datetime.now().strftime("%a %d %b %Y, %H:%M")
+    try:
+        from zoneinfo import ZoneInfo
+        now = dt.datetime.now(ZoneInfo("Asia/Kuala_Lumpur")).strftime("%a %d %b %Y, %I:%M %p")
+    except Exception:
+        now = dt.datetime.now().strftime("%a %d %b %Y, %H:%M")
     stocks = tab[tab["type"] == "Stock"]
     etfs = tab[(tab["type"] == "ETF") & tab["long_score"].notna()]
 
@@ -628,6 +656,16 @@ def render_html(tab: pd.DataFrame, macro: list[dict], top: int, demo: bool, news
     macro_rows = "".join(
         f"<tr><td>{html.escape(m['series'])}</td><td>{m['latest']:.2f}</td><td>{'' if not m['chg_3m'] == m['chg_3m'] else format(m['chg_3m'], '+.2f')}</td>"
         f"<td>{html.escape(m['note'])}</td><td class='muted'>{m['date']}</td></tr>" for m in macro)
+    # live ticker bar: market gauges + your current top picks
+    tape_syms = [{"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"}, {"proName": "NASDAQ:NDX", "title": "Nasdaq 100"},
+                 {"proName": "MYX:FBMKLCI", "title": "FBM KLCI"}, {"proName": "FX_IDC:USDMYR", "title": "USD/MYR"}]
+    seen = set()
+    for key in ("short_score", "medium_score", "long_score"):
+        for t in stocks.dropna(subset=[key]).sort_values(key, ascending=False).head(5).index:
+            sym = tv_symbol(t)
+            if sym and t not in seen:
+                seen.add(t)
+                tape_syms.append({"proName": sym, "title": t.replace(".KL", "")})
     new_n = sum(1 for v in tags.values() if "NEW" in v)
     flagged = sum(1 for t in (watchlist or []) if t.upper() in (shorts or {}))
 
@@ -670,6 +708,7 @@ Data comes from Yahoo Finance (free, sometimes late or wrong, especially for sma
 a{{color:var(--accent)}} .muted{{color:var(--ink2)}} .small{{font-size:13px}}
 header .sub{{color:var(--ink2);font-size:14px}}
 [hidden]{{display:none!important}}
+.tape{{min-height:46px;margin:6px 0}} .tvbox{{min-height:60px;margin-bottom:8px}} h4.livehead{{margin:6px 0;font-size:13px;color:var(--ink2);text-transform:uppercase;letter-spacing:.03em}}
 .stale{{background:var(--critbg);color:var(--critink);padding:10px 14px;border-radius:10px;margin:10px 0}}
 .demo{{background:#fde68a;color:#0b0b0b;padding:8px 12px;border-radius:8px;margin:10px 0}}
 .mood{{margin:12px 0;padding:12px 14px;border-radius:10px;background:var(--card);border-left:6px solid var(--ok)}}
@@ -704,8 +743,9 @@ tr.detail td{{background:var(--bg)}} .dgrid{{display:grid;grid-template-columns:
 .desc{{color:var(--ink2);font-size:14px;max-width:900px}} ol.plain li{{margin:6px 0}} .b{{font-weight:600}} .hi{{color:var(--safeink)}}
 .disc{{font-size:12px;color:var(--ink2);border-top:1px solid var(--line);margin-top:40px;padding-top:10px}}
 </style></head><body data-generated="{int(time.time())}"><div class="wrap">
-<header><h1>📈 My stock picker</h1><div class="sub">Updated {now} · {len(stocks)} stocks & {len(etfs)} ETFs checked · Research only, not financial advice</div></header>
+<header><h1>📈 My stock picker</h1><div class="sub">Scores updated {now} (Malaysia time) · refreshed every hour while markets are open · prices in the ticker bar and in each stock's details are live · {len(stocks)} stocks & {len(etfs)} ETFs checked · Research only, not financial advice</div></header>
 {demo_banner}
+<div id='tape' class='tape' data-syms='{html.escape(json.dumps(tape_syms))}'></div>
 <div class='stale' id='stale' hidden></div>
 {mood(tab, macro)}
 <div class="bar"><div class="tabs">{nav}</div>
@@ -760,11 +800,20 @@ function filter(){{
 function topFive(){{document.querySelectorAll('.col').forEach(function(c){{var i=0;c.querySelectorAll('.card').forEach(function(el){{
   if(el.hidden)return; i++; if(i>5){{el.hidden=true;}} else {{el.querySelector('.rank').textContent=i;}}}});
   var none=c.querySelector('.nonefound'); if(none) none.hidden=i>0;}});}}
-function toggle(tr){{var d=tr.nextElementSibling;d.hidden=!d.hidden;}}
+function toggle(tr){{var d=tr.nextElementSibling;d.hidden=!d.hidden;if(!d.hidden)loadLive(d);}}
+function tvWidget(box,kind,cfg){{  // TradingView's free embeddable widgets: live prices straight from TradingView
+  var c=document.createElement('div');c.className='tradingview-widget-container';var w=document.createElement('div');w.className='tradingview-widget-container__widget';c.appendChild(w);
+  var sc=document.createElement('script');sc.src='https://s3.tradingview.com/external-embedding/embed-widget-'+kind+'.js';sc.async=true;sc.text=JSON.stringify(cfg);c.appendChild(sc);box.innerHTML='';box.appendChild(c);}}
+var dark=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches;
+function loadLive(d){{var box=d.querySelector('.tvbox');if(!box||box.dataset.done)return;box.dataset.done=1;
+  tvWidget(box,'symbol-overview',{{symbols:[[box.dataset.sym.split(':').pop(),box.dataset.sym+'|1D']],chartOnly:false,width:'100%',height:300,locale:'en',colorTheme:dark?'dark':'light',
+    autosize:false,showVolume:false,hideDateRanges:false,scalePosition:'right',chartType:'area',dateRanges:['1d|5','1m|30','3m|60','12m|1D','60m|1W','all|1M']}});}}
+(function(){{var t=document.getElementById('tape');if(!t)return;var syms=JSON.parse(t.dataset.syms);
+  tvWidget(t,'ticker-tape',{{symbols:syms,showSymbolLogo:true,isTransparent:true,displayMode:'adaptive',colorTheme:dark?'dark':'light',locale:'en'}});}})();
 (function(){{var gen=+document.body.dataset.generated*1000, hrs=(Date.now()-gen)/36e5, el=document.getElementById('stale');
   var when=new Date(gen).toLocaleString([], {{weekday:'short', day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'}});
-  if(hrs>30){{el.innerHTML='<b>⚠ This report is out of date</b> (last updated '+when+', '+Math.round(hrs/24*10)/10+' days ago). '+
-    'Your Mac was probably asleep or offline at update time. Open the <b>Stock Picker</b> app (or double-click <b>Run now</b> in your StockPicker folder) to refresh it.';el.hidden=false;}}}})();
+  if(hrs>72){{el.innerHTML='<b>⚠ This report is out of date</b> (last updated '+when+', '+Math.round(hrs/24*10)/10+' days ago). '+
+    'Automatic updates may have stopped. On GitHub, open the <b>Actions</b> tab and click <b>Run workflow</b>, or ask Claude to check.';el.hidden=false;}}}})();
 var h=(location.hash||'#top').slice(1);show(document.getElementById('p-'+h)?h:'top');topFive();
 </script></body></html>"""
 

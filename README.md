@@ -1,6 +1,6 @@
 # Stock & ETF picker
 
-**Live report: https://jyiooi2012-art.github.io/StockPicker/** (updates automatically every weekday at about 6:30am and 6:15pm Malaysia time; to refresh now: Actions tab → Daily stock picker → Run workflow)
+**Live report: https://jyiooi2012-art.github.io/StockPicker/** (prices on the page are live via TradingView; scores refresh hourly while Bursa and US markets are open, and new stocks are searched for at about 6:30am and 6:15pm Malaysia time; to refresh now: Actions tab → Daily stock picker → Run workflow)
 
 
 A self-updating research dashboard. It scores every stock and ETF in `watchlist.txt` for
