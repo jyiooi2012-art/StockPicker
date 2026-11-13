@@ -1,0 +1,5 @@
+reports/.info_cache.json
+reports/news_latest.json
+reports/picks_*.html
+__pycache__/
+.venv/

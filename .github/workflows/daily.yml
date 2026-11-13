@@ -1,0 +1,55 @@
+name: Daily stock picker
+
+on:
+  schedule:
+    - cron: "30 22 * * 1-5"   # 6:30am Malaysia time (after the US close)
+    - cron: "15 10 * * 1-5"   # 6:15pm Malaysia time (after Bursa closes)
+  workflow_dispatch:           # "Run workflow" button for a manual refresh
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: picker
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: reports/.info_cache.json
+          key: info-${{ github.run_id }}
+          restore-keys: info-
+      - run: python stock_picker.py --out reports
+      - name: Keep a dated history in the repo
+        run: |
+          git config user.name "picker-bot"
+          git config user.email "picker-bot@users.noreply.github.com"
+          git add reports/*.csv reports/auto_watchlist.json
+          git commit -m "Scores $(date -u +%F)" || echo "nothing to commit"
+          git push
+      - name: Prepare site
+        run: mkdir -p site && cp reports/latest.html site/index.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
