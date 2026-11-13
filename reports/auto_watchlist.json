@@ -23,36 +23,78 @@
  },
  "5246.KL": {
   "added": "2026-11-13",
-  "last_best": 85.0,
+  "last_best": 86.0,
   "name": "WPRTS",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "short-term score 85: near its 52-week high, trading above its 50-day trend, strong recent price rise"
+  "why": "short-term score 86: near its 52-week high, trading above its 50-day trend, strong recent price rise"
  },
  "5292.KL": {
   "added": "2026-11-13",
-  "last_best": 79.0,
+  "last_best": 78.0,
   "name": "UWC",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "medium-term score 79: sales growing fast, strong 12-month momentum, analysts expect profits to rise"
+  "why": "medium-term score 78: sales growing fast, strong 12-month momentum, analysts expect profits to rise"
+ },
+ "7103.KL": {
+  "added": "2026-11-13",
+  "last_best": 74.0,
+  "name": "SPRITZER",
+  "sources": [
+   "yahoo:my_growth",
+   "yahoo:my_momentum"
+  ],
+  "strikes": 0,
+  "why": "short-term score 74: strong 3-month price rise, near its 52-week high, strong recent price rise"
  },
  "ADI": {
   "added": "2026-11-13",
-  "last_best": 75.0,
+  "last_best": 76.0,
   "name": "Analog Devices, Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "short-term score 75: rising trading volume, near its 52-week high, trading above its 50-day trend"
+  "why": "short-term score 76: rising trading volume, near its 52-week high, trading above its 50-day trend"
+ },
+ "ALAB": {
+  "added": "2026-11-13",
+  "last_best": 73.0,
+  "name": "Astera Labs, Inc.",
+  "sources": [
+   "yahoo:growth_technology_stocks"
+  ],
+  "strikes": 0,
+  "why": "long-term score 73: sales growing fast, low debt, strong 3-year track record"
+ },
+ "CRBG": {
+  "added": "2026-11-13",
+  "last_best": 78.0,
+  "name": "Corebridge Financial Inc.",
+  "sources": [
+   "yahoo:undervalued_growth_stocks",
+   "yahoo:undervalued_large_caps"
+  ],
+  "strikes": 0,
+  "why": "short-term score 78: near its 52-week high, strong recent price rise, trading above its 50-day trend"
+ },
+ "CRDO": {
+  "added": "2026-11-13",
+  "last_best": 74.0,
+  "name": "Credo Technology Group Holding ",
+  "sources": [
+   "yahoo:growth_technology_stocks"
+  ],
+  "strikes": 0,
+  "why": "long-term score 74: low debt, strong 3-year track record, sales growing fast"
  },
  "DELL": {
   "added": "2026-11-13",
@@ -67,13 +109,24 @@
  },
  "DRH": {
   "added": "2026-11-13",
-  "last_best": 82.0,
+  "last_best": 83.0,
   "name": "Diamondrock Hospitality Company",
   "sources": [
    "yahoo:undervalued_growth_stocks"
   ],
   "strikes": 0,
-  "why": "short-term score 82: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
+  "why": "short-term score 83: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
+ },
+ "EQH": {
+  "added": "2026-11-13",
+  "last_best": 75.0,
+  "name": "Equitable Holdings, Inc.",
+  "sources": [
+   "Dataroma: recently bought by a well-known 'superinvestor' fund",
+   "yahoo:undervalued_large_caps"
+  ],
+  "strikes": 0,
+  "why": "short-term score 75: near its 52-week high, trading above its 50-day trend, strong recent price rise"
  },
  "HGV": {
   "added": "2026-11-13",
@@ -97,19 +150,40 @@
   "strikes": 0,
   "why": "short-term score 86: trading above its 50-day trend, strong 3-month price rise, strong recent price rise"
  },
+ "HMY": {
+  "added": "2026-11-13",
+  "last_best": 73.0,
+  "name": "Harmony Gold Mining Company Lim",
+  "sources": [
+   "yahoo:hidden_growers",
+   "yahoo:undervalued_growth_stocks"
+  ],
+  "strikes": 0,
+  "why": "long-term score 73: price reasonable for its growth, generates real cash, high return on shareholders' money"
+ },
  "HPE": {
   "added": "2026-11-13",
-  "last_best": 81.0,
+  "last_best": 80.0,
   "name": "Hewlett Packard Enterprise Comp",
   "sources": [
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 81: strong 12-month momentum, profits growing fast, strong 6-month momentum"
+  "why": "medium-term score 80: strong 12-month momentum, profits growing fast, strong 6-month momentum"
+ },
+ "LSCC": {
+  "added": "2026-11-13",
+  "last_best": 75.0,
+  "name": "Lattice Semiconductor Corporati",
+  "sources": [
+   "yahoo:growth_technology_stocks"
+  ],
+  "strikes": 0,
+  "why": "short-term score 75: rising trading volume, momentum turning up, trading above its 50-day trend"
  },
  "MU": {
   "added": "2026-11-13",
-  "last_best": 86.0,
+  "last_best": 85.0,
   "name": "Micron Technology, Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
@@ -119,7 +193,7 @@
    "yahoo:undervalued_growth_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 86: sales growing fast, strong 12-month momentum, profits growing fast"
+  "why": "medium-term score 85: sales growing fast, strong 12-month momentum, profits growing fast"
  },
  "PENG": {
   "added": "2026-11-13",
@@ -129,7 +203,7 @@
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 82: profits growing fast, strong 12-month momentum, sales growing fast"
+  "why": "medium-term score 82: strong 12-month momentum, profits growing fast, sales growing fast"
  },
  "PR": {
   "added": "2026-11-13",
