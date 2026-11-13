@@ -57,6 +57,7 @@ means "stronger than 80% of what you're watching", **not** an 80% chance of goin
 - **Long ("multi-bagger traits"):** revenue growth, gross margin, ROE, free-cash-flow yield, PEG, debt, insider ownership, room to grow (smaller market cap), 3-year CAGR, and **tax drag for a Malaysian resident**.
 - **ETFs:** momentum for short/medium; 3y/5y returns, fees, size, drawdown and tax drag for long-term.
 - **Yrs→2x / 3x:** how long a double/triple would take *if* recent growth simply continued. It is arithmetic, not a forecast.
+- **💎 On sale:** a stock with a weak short-term score (price falling over 1 month, 3 months or below its 50-day average) but a long-term score of 70+ and a double within ~10 years at its recent growth pace. Short-seller-flagged stocks are excluded. Shown as a badge everywhere and in its own tab.
 
 News, sentiment and short-seller reports are shown **next to** the scores, not mixed in. Headlines are noisy and short sellers are biased, so you judge them yourself.
 

@@ -667,9 +667,24 @@ def render_html(tab: pd.DataFrame, macro: list[dict], top: int, demo: bool, news
                 seen.add(t)
                 tape_syms.append({"proName": sym, "title": t.replace(".KL", "")})
     new_n = sum(1 for v in tags.values() if "NEW" in v)
+    # 💎 "On sale": strong long-term business whose price is falling right now.
+    def _falling(r):
+        return any(_num_ok(r.get(k)) and r.get(k) < 0 for k in ("ret_1m", "ret_3m", "pct_vs_sma50"))
+    sale = stocks[(stocks["long_score"] >= 70) & (stocks["short_score"] < 50)
+                  & stocks["yrs_to_2x"].apply(lambda x: _num_ok(x) and x <= 10)]
+    sale = sale.loc[[t for t, r in sale.iterrows() if _falling(r) and "SHORT" not in str(r.get("risks", ""))]]
+    sale_badge = (" <span class='badge sale' title='On sale: price falling short term, but strong long-term score. "
+                  "Not a guarantee it will bounce back.'>💎 on sale</span>")
+    tags = dict(tags)
+    for t in sale.index:
+        tags[t] = tags.get(t, "") + sale_badge
+    sale_cols = [("1m", lambda t, r: pct(r["ret_1m"])), ("3m", lambda t, r: pct(r["ret_3m"])),
+                 ("Short score", lambda t, r: num(r["short_score"], 0)),
+                 ("2× / 3× in", lambda t, r: "~{:.0f} / ~{:.0f} yrs".format(r["yrs_to_2x"], r["yrs_to_3x"]) if _num_ok(r["yrs_to_3x"])
+                  else "~{:.0f} yrs / –".format(r["yrs_to_2x"]))]
     flagged = sum(1 for t in (watchlist or []) if t.upper() in (shorts or {}))
 
-    tabs = [("top", "⭐ Top picks"), ("short", "Short term"), ("medium", "Medium term"), ("long", "Long term"), ("etf", "ETFs"),
+    tabs = [("top", "⭐ Top picks"), ("short", "Short term"), ("medium", "Medium term"), ("long", "Long term"), ("sale", f"💎 On sale{f' ({len(sale)})' if len(sale) else ''}"), ("etf", "ETFs"),
             ("new", f"New & dropped{f' ({new_n})' if new_n else ''}"), ("news", "News"), ("flags", f"Red flags{f' ({flagged})' if flagged else ''}"),
             ("money", "Tax & fees"), ("market", "Market"), ("help", "How it works")]
     nav = "".join(f"<button class='tab' data-tab='{k}' onclick=\"show('{k}')\">{v}</button>" for k, v in tabs)
@@ -689,6 +704,7 @@ A mark of 80 means it looks better than 80% of the stocks being watched. It is <
 <li><b>Always check the ⚠ risk tags</b> before buying, especially red "short-seller report" tags.</li>
 <li><b>Click any row</b> to see all the numbers, tax notes for a Malaysian investor, and links to Yahoo, TradingView, Finviz and Bursa.</li>
 <li>Use the <b>search box</b> and <b>US / Malaysia</b> buttons at the top to narrow the list, and tick <b>Hide risky</b> to show only stocks without warning flags.</li>
+<li><span class='badge sale'>💎 on sale</span> = the price is falling right now (weak short-term mark), but the long-term mark is 70+ and, if its recent growth simply continued, it would double within about 10 years. These can be chances to buy a good business cheaper, but a falling price sometimes means bad news, so read the risks and news first.</li>
 <li><span class='badge new'>NEW</span> = found automatically this run. <span class='badge auto'>auto</span> = found automatically earlier. Others are from your own watchlist.</li>
 </ol>
 <p class='muted'>What goes into each mark: Short = recent price rise, trend, healthy momentum and trading volume. Medium = 12-month momentum, profit and sales growth, analyst targets.
@@ -732,7 +748,7 @@ label.hide{{font-size:14px;color:var(--ink2);cursor:pointer}}
 .others{{margin-top:3px}} .mini{{font-size:11px;color:var(--ink2);margin-right:6px}}
 .chip{{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;margin:2px 2px 0 0}}
 .chip.warn{{background:var(--warnbg);color:var(--warnink)}} .chip.crit{{background:var(--critbg);color:var(--critink);font-weight:600}} .chip.safe{{background:var(--safebg);color:var(--safeink)}}
-.badge{{font-size:11px;padding:1px 6px;border-radius:6px;margin-left:4px;vertical-align:middle}} .badge.new{{background:var(--accent);color:#fff}} .badge.auto{{border:1px solid var(--line);color:var(--ink2)}}
+.badge{{font-size:11px;padding:1px 6px;border-radius:6px;margin-left:4px;vertical-align:middle}} .badge.new{{background:var(--accent);color:#fff}} .badge.auto{{border:1px solid var(--line);color:var(--ink2)}} .badge.sale{{background:#e0f2fe;color:#075985;border:1px solid #7dd3fc}}
 .tablewrap{{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}}
 table{{border-collapse:collapse;width:100%;font-size:14px}} th,td{{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}}
 th{{font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--ink2);background:var(--card);white-space:nowrap}} th .q{{font-size:10px;border:1px solid var(--line);border-radius:50%;padding:0 4px}}
@@ -761,6 +777,7 @@ tr.detail td{{background:var(--bg)}} .dgrid{{display:grid;grid-template-columns:
 {panel("short", "<h2>⚡ Short-term picks <small class='muted'>(weeks to 3 months)</small></h2><p class='desc'>Stocks with strong recent momentum that aren't overheated yet. Short-term moves are the least predictable, so use small positions and a stop-loss.</p>" + pick_table(stocks, "short_score", short_cols, top, news, tags, "short"))}
 {panel("medium", "<h2>📅 Medium-term picks <small class='muted'>(3 to 18 months)</small></h2><p class='desc'>Rising for a year and backed by growing profits and analyst expectations.</p>" + pick_table(stocks, "medium_score", med_cols, top, news, tags, "medium"))}
 {panel("long", "<h2>🌱 Long-term picks <small class='muted'>(3 to 10 years)</small></h2><p class='desc'>The traits most big long-term winners share: fast-growing sales, high margins, real cash, sensible price, low debt and room to grow. “Doubles in” is simple arithmetic if growth continued, not a promise.</p>" + pick_table(stocks, "long_score", long_cols, top, news, tags, "long"))}
+{panel("sale", "<h2>💎 On sale <small class='muted'>(falling now, strong long term)</small></h2><p class='desc'>Stocks whose price is dropping in the short term, but which still score 70+ for the long term and would double within about 10 years if their recent growth simply continued (arithmetic, not a forecast). A dip can be a chance to buy a good business cheaper, or a warning that something has gone wrong: click a row and read the news and risks before buying. Stocks with a short-seller report are left out.</p>" + pick_table(sale, "long_score", sale_cols, top, news, tags, "long"))}
 {panel("etf", "<h2>ETFs</h2><p class='desc'>ETFs are baskets of many stocks: lower risk than single stocks. For US-listed ETFs, check the Tax & fees tab for cheaper-tax Irish (UCITS) versions.</p>" + pick_table(etfs, "long_score", etf_cols, top, news, tags, "long"))}
 {panel("new", discovery_html or "<p class='desc'>Automatic discovery was switched off for this run.</p>")}
 {panel("news", (newsmod.render(news) if news else "<p class='desc'>News scan was skipped this run.</p>"))}
