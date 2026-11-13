@@ -12,14 +12,14 @@
  },
  "4324.KL": {
   "added": "2026-11-13",
-  "last_best": 83.0,
+  "last_best": 82.0,
   "name": "HENGYUAN",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "medium-term score 83: strong 6-month momentum, strong 12-month momentum, above its long-term trend"
+  "why": "medium-term score 82: strong 6-month momentum, strong 12-month momentum, above its long-term trend"
  },
  "5246.KL": {
   "added": "2026-11-13",
@@ -30,33 +30,86 @@
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "short-term score 85: near its 52-week high, rising trading volume, trading above its 50-day trend"
+  "why": "short-term score 85: near its 52-week high, trading above its 50-day trend, strong recent price rise"
+ },
+ "5292.KL": {
+  "added": "2026-11-13",
+  "last_best": 79.0,
+  "name": "UWC",
+  "sources": [
+   "yahoo:my_growth",
+   "yahoo:my_momentum"
+  ],
+  "strikes": 0,
+  "why": "medium-term score 79: sales growing fast, strong 12-month momentum, analysts expect profits to rise"
+ },
+ "ADI": {
+  "added": "2026-11-13",
+  "last_best": 75.0,
+  "name": "Analog Devices, Inc.",
+  "sources": [
+   "Dataroma: recently bought by a well-known 'superinvestor' fund",
+   "yahoo:growth_technology_stocks"
+  ],
+  "strikes": 0,
+  "why": "short-term score 75: rising trading volume, near its 52-week high, trading above its 50-day trend"
  },
  "DELL": {
   "added": "2026-11-13",
-  "last_best": 83.0,
+  "last_best": 82.0,
   "name": "Dell Technologies Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 83: strong 12-month momentum, strong 6-month momentum, profits growing fast"
+  "why": "medium-term score 82: strong 12-month momentum, strong 6-month momentum, profits growing fast"
+ },
+ "DRH": {
+  "added": "2026-11-13",
+  "last_best": 82.0,
+  "name": "Diamondrock Hospitality Company",
+  "sources": [
+   "yahoo:undervalued_growth_stocks"
+  ],
+  "strikes": 0,
+  "why": "short-term score 82: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
+ },
+ "HGV": {
+  "added": "2026-11-13",
+  "last_best": 80.0,
+  "name": "Hilton Grand Vacations Inc.",
+  "sources": [
+   "Dataroma: recently bought by a well-known 'superinvestor' fund",
+   "OpenInsider: several insiders buying their own shares"
+  ],
+  "strikes": 0,
+  "why": "short-term score 80: strong recent price rise, trading above its 50-day trend, momentum turning up"
  },
  "HHH": {
   "added": "2026-11-13",
-  "last_best": 85.0,
+  "last_best": 86.0,
   "name": "Howard Hughes Holdings Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "OpenInsider: several insiders buying their own shares"
   ],
   "strikes": 0,
-  "why": "short-term score 85: trading above its 50-day trend, strong 3-month price rise, strong recent price rise"
+  "why": "short-term score 86: trading above its 50-day trend, strong 3-month price rise, strong recent price rise"
+ },
+ "HPE": {
+  "added": "2026-11-13",
+  "last_best": 81.0,
+  "name": "Hewlett Packard Enterprise Comp",
+  "sources": [
+   "yahoo:growth_technology_stocks"
+  ],
+  "strikes": 0,
+  "why": "medium-term score 81: strong 12-month momentum, profits growing fast, strong 6-month momentum"
  },
  "MU": {
   "added": "2026-11-13",
-  "last_best": 85.0,
+  "last_best": 86.0,
   "name": "Micron Technology, Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
@@ -66,28 +119,60 @@
    "yahoo:undervalued_growth_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 85: sales growing fast, strong 12-month momentum, profits growing fast"
+  "why": "medium-term score 86: sales growing fast, strong 12-month momentum, profits growing fast"
+ },
+ "PENG": {
+  "added": "2026-11-13",
+  "last_best": 82.0,
+  "name": "Penguin Solutions, Inc.",
+  "sources": [
+   "yahoo:growth_technology_stocks"
+  ],
+  "strikes": 0,
+  "why": "medium-term score 82: profits growing fast, strong 12-month momentum, sales growing fast"
+ },
+ "PR": {
+  "added": "2026-11-13",
+  "last_best": 76.0,
+  "name": "Permian Resources Corporation",
+  "sources": [
+   "yahoo:undervalued_growth_stocks",
+   "yahoo:undervalued_large_caps"
+  ],
+  "strikes": 0,
+  "why": "medium-term score 76: profits growing fast, strong 12-month momentum, sales growing fast"
+ },
+ "SOPH": {
+  "added": "2026-11-13",
+  "last_best": 80.0,
+  "name": "SOPHiA GENETICS SA",
+  "sources": [
+   "OpenInsider: several insiders buying their own shares",
+   "yahoo:small_cap_gainers"
+  ],
+  "strikes": 0,
+  "why": "short-term score 80: strong recent price rise, momentum turning up, strong 3-month price rise"
  },
  "TFX": {
   "added": "2026-11-13",
-  "last_best": 84.0,
+  "last_best": 85.0,
   "name": "Teleflex Incorporated",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "yahoo:hidden_growers"
   ],
   "strikes": 0,
-  "why": "short-term score 84: strong recent price rise, near its 52-week high, trading above its 50-day trend"
+  "why": "short-term score 85: strong recent price rise, near its 52-week high, trading above its 50-day trend"
  },
  "TXN": {
   "added": "2026-11-13",
-  "last_best": 86.0,
+  "last_best": 87.0,
   "name": "Texas Instruments Incorporated",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "short-term score 86: trading above its 50-day trend, strong recent price rise, near its 52-week high"
+  "why": "short-term score 87: trading above its 50-day trend, strong recent price rise, near its 52-week high"
  }
 }
