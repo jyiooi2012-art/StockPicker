@@ -36,16 +36,25 @@ PL
   fi
 }
 
-make_app() {  # "Stock Picker" app for Spotlight / Launchpad: opens the report, refreshes it if old
+ONLINE_URL="$(cat "$DEST/ONLINE_URL" 2>/dev/null)"   # set when the picker runs online on GitHub instead
+
+make_app() {  # "Stock Picker" app for Spotlight / Launchpad
   APP="$HOME/Applications/Stock Picker.app"
-  [ -d "$APP" ] && [ "$APP" -nt "$DEST/run.sh" ] && return
-  mkdir -p "$HOME/Applications"
-  /usr/bin/osacompile -o "$APP" -e "do shell script \"open '$DEST/reports/latest.html'; nohup '$DEST/run.sh' app > /dev/null 2>&1 &\"" >/dev/null 2>&1
+  [ -d "$APP" ] && [ "$APP" -nt "$DEST/run.sh" ] && [ "$APP" -nt "$DEST/ONLINE_URL" ] && return
+  mkdir -p "$HOME/Applications"; rm -rf "$APP"
+  if [ -n "$ONLINE_URL" ]; then   # online mode: just open the live web page
+    /usr/bin/osacompile -o "$APP" -e "open location \"$ONLINE_URL\"" >/dev/null 2>&1
+  else                            # Mac mode: open the local report, refresh it if old
+    /usr/bin/osacompile -o "$APP" -e "do shell script \"open '$DEST/reports/latest.html'; nohup '$DEST/run.sh' app > /dev/null 2>&1 &\"" >/dev/null 2>&1
+  fi
 }
 
 mkdir -p "$HOME/Library/LaunchAgents"
 write_plist
 make_app
+
+# online mode: GitHub does the updates, so the Mac's automatic run does nothing ("Run now" still works)
+[ -n "$ONLINE_URL" ] && [ "$MODE" = "auto" ] && exit 0
 
 if [ "$MODE" != "now" ] && [ -f "$STAMP" ]; then
   age=$(( $(date +%s) - $(stat -f %m "$STAMP") ))

@@ -1,4 +1,7 @@
-# Stock & ETF picker (Malaysia-aware)
+# Stock & ETF picker
+
+**Live report: https://jyiooi2012-art.github.io/StockPicker/** (updates automatically every weekday at about 6:30am and 6:15pm Malaysia time; to refresh now: Actions tab → Daily stock picker → Run workflow)
+
 
 A self-updating research dashboard. It scores every stock and ETF in `watchlist.txt` for
 **short-term (weeks–3 months)**, **medium-term (3–18 months)** and **long-term (3–10 years)**
