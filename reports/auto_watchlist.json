@@ -1,0 +1,93 @@
+{
+ "0099.KL": {
+  "added": "2026-11-13",
+  "last_best": 86.0,
+  "name": "SCICOM",
+  "sources": [
+   "yahoo:my_growth",
+   "yahoo:my_momentum"
+  ],
+  "strikes": 0,
+  "why": "medium-term score 86: strong 12-month momentum, sales growing fast, profits growing fast"
+ },
+ "4324.KL": {
+  "added": "2026-11-13",
+  "last_best": 83.0,
+  "name": "HENGYUAN",
+  "sources": [
+   "yahoo:my_growth",
+   "yahoo:my_momentum"
+  ],
+  "strikes": 0,
+  "why": "medium-term score 83: strong 6-month momentum, strong 12-month momentum, above its long-term trend"
+ },
+ "5246.KL": {
+  "added": "2026-11-13",
+  "last_best": 85.0,
+  "name": "WPRTS",
+  "sources": [
+   "yahoo:my_growth",
+   "yahoo:my_momentum"
+  ],
+  "strikes": 0,
+  "why": "short-term score 85: near its 52-week high, rising trading volume, trading above its 50-day trend"
+ },
+ "DELL": {
+  "added": "2026-11-13",
+  "last_best": 83.0,
+  "name": "Dell Technologies Inc.",
+  "sources": [
+   "Dataroma: recently bought by a well-known 'superinvestor' fund",
+   "yahoo:growth_technology_stocks"
+  ],
+  "strikes": 0,
+  "why": "medium-term score 83: strong 12-month momentum, strong 6-month momentum, profits growing fast"
+ },
+ "HHH": {
+  "added": "2026-11-13",
+  "last_best": 85.0,
+  "name": "Howard Hughes Holdings Inc.",
+  "sources": [
+   "Dataroma: recently bought by a well-known 'superinvestor' fund",
+   "OpenInsider: several insiders buying their own shares"
+  ],
+  "strikes": 0,
+  "why": "short-term score 85: trading above its 50-day trend, strong 3-month price rise, strong recent price rise"
+ },
+ "MU": {
+  "added": "2026-11-13",
+  "last_best": 85.0,
+  "name": "Micron Technology, Inc.",
+  "sources": [
+   "Dataroma: recently bought by a well-known 'superinvestor' fund",
+   "Mentioned in Motley Fool articles",
+   "Mentioned in Zacks (Nasdaq.com) articles",
+   "yahoo:growth_technology_stocks",
+   "yahoo:undervalued_growth_stocks"
+  ],
+  "strikes": 0,
+  "why": "medium-term score 85: sales growing fast, strong 12-month momentum, profits growing fast"
+ },
+ "TFX": {
+  "added": "2026-11-13",
+  "last_best": 84.0,
+  "name": "Teleflex Incorporated",
+  "sources": [
+   "Dataroma: recently bought by a well-known 'superinvestor' fund",
+   "yahoo:hidden_growers"
+  ],
+  "strikes": 0,
+  "why": "short-term score 84: strong recent price rise, near its 52-week high, trading above its 50-day trend"
+ },
+ "TXN": {
+  "added": "2026-11-13",
+  "last_best": 86.0,
+  "name": "Texas Instruments Incorporated",
+  "sources": [
+   "Dataroma: recently bought by a well-known 'superinvestor' fund",
+   "yahoo:growth_technology_stocks"
+  ],
+  "strikes": 0,
+  "why": "short-term score 86: trading above its 50-day trend, strong recent price rise, near its 52-week high"
+ }
+}
