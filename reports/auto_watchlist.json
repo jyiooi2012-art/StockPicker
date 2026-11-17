@@ -1,69 +1,69 @@
 {
  "0099.KL": {
   "added": "2026-11-13",
-  "last_best": 86.0,
+  "last_best": 84.0,
   "name": "SCICOM",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "medium-term score 86: strong 12-month momentum, sales growing fast, above its long-term trend"
+  "why": "medium-term score 84: strong 12-month momentum, sales growing fast, profits growing fast"
  },
  "4324.KL": {
   "added": "2026-11-13",
-  "last_best": 82.0,
+  "last_best": 81.0,
   "name": "HENGYUAN",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "medium-term score 82: strong 6-month momentum, strong 12-month momentum, above its long-term trend"
+  "why": "medium-term score 81: strong 6-month momentum, strong 12-month momentum, above its long-term trend"
  },
  "5246.KL": {
   "added": "2026-11-13",
-  "last_best": 80.0,
+  "last_best": 74.0,
   "name": "WPRTS",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "short-term score 80: near its 52-week high, trading above its 50-day trend, strong recent price rise"
+  "why": "short-term score 74: near its 52-week high, strong recent price rise, trading above its 50-day trend"
  },
  "5292.KL": {
   "added": "2026-11-13",
-  "last_best": 77.0,
+  "last_best": 72.0,
   "name": "UWC",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "medium-term score 77: sales growing fast, analysts expect profits to rise, strong 12-month momentum"
+  "why": "medium-term score 72: sales growing fast, analysts expect profits to rise, strong 12-month momentum"
  },
  "7103.KL": {
   "added": "2026-11-13",
-  "last_best": 80.0,
+  "last_best": 75.0,
   "name": "SPRITZER",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "short-term score 80: strong 3-month price rise, near its 52-week high, strong recent price rise"
+  "why": "short-term score 75: strong 3-month price rise, near its 52-week high, strong recent price rise"
  },
  "ADI": {
   "added": "2026-11-13",
-  "last_best": 66.0,
+  "last_best": 67.0,
   "name": "Analog Devices, Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 66: strong 12-month momentum, analysts expect profits to rise, profits growing fast"
+  "why": "medium-term score 67: strong 12-month momentum, analysts expect profits to rise, profits growing fast"
  },
  "ALAB": {
   "added": "2026-11-13",
@@ -88,25 +88,25 @@
  },
  "ATAT": {
   "added": "2026-11-16",
-  "last_best": 84.0,
+  "last_best": 85.0,
   "name": "Atour Lifestyle Holdings Limite",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "yahoo:hidden_growers"
   ],
   "strikes": 0,
-  "why": "short-term score 84: trading above its 50-day trend, strong recent price rise, momentum turning up"
+  "why": "short-term score 85: trading above its 50-day trend, momentum turning up, strong recent price rise"
  },
  "CRBG": {
   "added": "2026-11-13",
-  "last_best": 75.0,
+  "last_best": 76.0,
   "name": "Corebridge Financial Inc.",
   "sources": [
    "yahoo:undervalued_growth_stocks",
    "yahoo:undervalued_large_caps"
   ],
   "strikes": 0,
-  "why": "short-term score 75: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
+  "why": "short-term score 76: near its 52-week high, strong 3-month price rise, strong recent price rise"
  },
  "CRDO": {
   "added": "2026-11-13",
@@ -127,7 +127,7 @@
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 78: strong 12-month momentum, analyst price targets well above today's price, profits growing fast"
+  "why": "medium-term score 78: strong 12-month momentum, analyst price targets well above today's price, strong 6-month momentum"
  },
  "DRH": {
   "added": "2026-11-13",
@@ -148,29 +148,29 @@
    "yahoo:undervalued_large_caps"
   ],
   "strikes": 0,
-  "why": "short-term score 75: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
+  "why": "short-term score 75: near its 52-week high, strong 3-month price rise, strong recent price rise"
  },
  "FIVE": {
   "added": "2026-11-16",
-  "last_best": 72.0,
+  "last_best": 71.0,
   "name": "Five Below, Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "Mentioned in Motley Fool articles"
   ],
   "strikes": 0,
-  "why": "short-term score 72: strong recent price rise, near its 52-week high, trading above its 50-day trend"
+  "why": "short-term score 71: strong recent price rise, near its 52-week high, trading above its 50-day trend"
  },
  "HGV": {
   "added": "2026-11-13",
-  "last_best": 79.0,
+  "last_best": 80.0,
   "name": "Hilton Grand Vacations Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "OpenInsider: several insiders buying their own shares"
   ],
   "strikes": 0,
-  "why": "short-term score 79: trading above its 50-day trend, strong recent price rise, momentum turning up"
+  "why": "short-term score 80: trading above its 50-day trend, strong recent price rise, momentum turning up"
  },
  "HHH": {
   "added": "2026-11-13",
@@ -185,24 +185,24 @@
  },
  "HMY": {
   "added": "2026-11-13",
-  "last_best": 72.0,
+  "last_best": 73.0,
   "name": "Harmony Gold Mining Company Lim",
   "sources": [
    "yahoo:hidden_growers",
    "yahoo:undervalued_growth_stocks"
   ],
   "strikes": 0,
-  "why": "long-term score 72: price reasonable for its growth, generates real cash, high return on shareholders' money"
+  "why": "long-term score 73: price reasonable for its growth, generates real cash, high return on shareholders' money"
  },
  "HPE": {
   "added": "2026-11-13",
-  "last_best": 79.0,
+  "last_best": 80.0,
   "name": "Hewlett Packard Enterprise Comp",
   "sources": [
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 79: strong 12-month momentum, profits growing fast, strong 6-month momentum"
+  "why": "medium-term score 80: strong 12-month momentum, profits growing fast, strong 6-month momentum"
  },
  "LSCC": {
   "added": "2026-11-13",
@@ -227,7 +227,7 @@
  },
  "MU": {
   "added": "2026-11-13",
-  "last_best": 83.0,
+  "last_best": 84.0,
   "name": "Micron Technology, Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
@@ -237,17 +237,17 @@
    "yahoo:undervalued_growth_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 83: sales growing fast, strong 12-month momentum, analyst price targets well above today's price"
+  "why": "medium-term score 84: sales growing fast, strong 12-month momentum, profits growing fast"
  },
  "PENG": {
   "added": "2026-11-13",
-  "last_best": 78.0,
+  "last_best": 79.0,
   "name": "Penguin Solutions, Inc.",
   "sources": [
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 78: strong 12-month momentum, profits growing fast, analyst price targets well above today's price"
+  "why": "medium-term score 79: strong 12-month momentum, profits growing fast, analyst price targets well above today's price"
  },
  "PR": {
   "added": "2026-11-13",
@@ -291,18 +291,18 @@
    "yahoo:small_cap_gainers"
   ],
   "strikes": 0,
-  "why": "medium-term score 75: strong 6-month momentum, above its long-term trend, strong 12-month momentum"
+  "why": "short-term score 75: momentum turning up, strong recent price rise, rising trading volume"
  },
  "TFX": {
   "added": "2026-11-13",
-  "last_best": 84.0,
+  "last_best": 85.0,
   "name": "Teleflex Incorporated",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "yahoo:hidden_growers"
   ],
   "strikes": 0,
-  "why": "short-term score 84: near its 52-week high, trading above its 50-day trend, strong recent price rise"
+  "why": "short-term score 85: near its 52-week high, trading above its 50-day trend, strong recent price rise"
  },
  "TGT": {
   "added": "2026-11-16",
@@ -313,7 +313,7 @@
    "Mentioned in Motley Fool articles"
   ],
   "strikes": 0,
-  "why": "short-term score 78: near its 52-week high, trading above its 50-day trend, strong 3-month price rise"
+  "why": "short-term score 78: near its 52-week high, trading above its 50-day trend, momentum turning up"
  },
  "TXN": {
   "added": "2026-11-13",
@@ -324,7 +324,7 @@
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "short-term score 76: strong recent price rise, strong 3-month price rise, trading above its 50-day trend"
+  "why": "short-term score 76: strong 3-month price rise, strong recent price rise, trading above its 50-day trend"
  },
  "ULCC": {
   "added": "2026-11-13",
