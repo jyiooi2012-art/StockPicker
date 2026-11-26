@@ -12,47 +12,47 @@
  },
  "0339.KL": {
   "added": "2026-11-20",
-  "last_best": 74.0,
+  "last_best": 75.0,
   "name": "CBHB",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "long-term score 74: sales growing fast, insiders own a big stake, still small, so room to grow"
+  "why": "long-term score 75: sales growing fast, insiders own a big stake, still small, so room to grow"
  },
  "0390.KL": {
   "added": "2026-11-23",
-  "last_best": 76.0,
+  "last_best": 77.0,
   "name": "ISF",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "long-term score 76: insiders own a big stake, high return on shareholders' money, still small, so room to grow"
+  "why": "long-term score 77: insiders own a big stake, still small, so room to grow, high return on shareholders' money"
  },
  "4324.KL": {
   "added": "2026-11-13",
-  "last_best": 81.0,
+  "last_best": 82.0,
   "name": "HENGYUAN",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "medium-term score 81: strong 6-month momentum, strong 12-month momentum, above its long-term trend"
+  "why": "medium-term score 82: strong 6-month momentum, strong 12-month momentum, above its long-term trend"
  },
  "5292.KL": {
   "added": "2026-11-13",
-  "last_best": 73.0,
+  "last_best": 74.0,
   "name": "UWC",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "medium-term score 73: sales growing fast, strong 12-month momentum, analysts expect profits to rise"
+  "why": "medium-term score 74: sales growing fast, strong 12-month momentum, analysts expect profits to rise"
  },
  "7103.KL": {
   "added": "2026-11-13",
@@ -78,13 +78,13 @@
  },
  "ALAB": {
   "added": "2026-11-13",
-  "last_best": 72.0,
+  "last_best": 71.0,
   "name": "Astera Labs, Inc.",
   "sources": [
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "long-term score 72: sales growing fast, low debt, strong 3-year track record"
+  "why": "long-term score 71: sales growing fast, low debt, strong 3-year track record"
  },
  "ATAT": {
   "added": "2026-11-16",
@@ -138,7 +138,7 @@
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "long-term score 77: low debt, strong 3-year track record, price reasonable for its growth"
+  "why": "long-term score 77: low debt, strong 3-year track record, sales growing fast"
  },
  "DELL": {
   "added": "2026-11-13",
@@ -149,7 +149,7 @@
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 73: strong 12-month momentum, analyst price targets well above today's price, profits growing fast"
+  "why": "medium-term score 73: strong 12-month momentum, sales growing fast, profits growing fast"
  },
  "DIS": {
   "added": "2026-11-20",
@@ -174,25 +174,25 @@
  },
  "EFC": {
   "added": "2026-11-24",
-  "last_best": 75.0,
+  "last_best": 76.0,
   "name": "Ellington Financial Inc.",
   "sources": [
    "OpenInsider: several insiders buying their own shares",
    "yahoo:aggressive_small_caps"
   ],
   "strikes": 0,
-  "why": "short-term score 75: momentum turning up, near its 52-week high, trading above its 50-day trend"
+  "why": "short-term score 76: momentum turning up, near its 52-week high, trading above its 50-day trend"
  },
  "EQH": {
   "added": "2026-11-13",
-  "last_best": 73.0,
+  "last_best": 72.0,
   "name": "Equitable Holdings, Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "yahoo:undervalued_large_caps"
   ],
   "strikes": 0,
-  "why": "medium-term score 73: sales growing fast, strong 6-month momentum, above its long-term trend"
+  "why": "medium-term score 72: sales growing fast, strong 6-month momentum, above its long-term trend"
  },
  "FRO": {
   "added": "2026-11-23",
@@ -251,13 +251,13 @@
  },
  "HPE": {
   "added": "2026-11-13",
-  "last_best": 77.0,
+  "last_best": 76.0,
   "name": "Hewlett Packard Enterprise Comp",
   "sources": [
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 77: strong 12-month momentum, profits growing fast, analysts expect profits to rise"
+  "why": "medium-term score 76: strong 12-month momentum, profits growing fast, sales growing fast"
  },
  "KSS": {
   "added": "2026-11-26",
@@ -296,13 +296,13 @@
  },
  "P": {
   "added": "2026-11-19",
-  "last_best": 77.0,
+  "last_best": 76.0,
   "name": "Everpure, Inc.",
   "sources": [
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 77: analysts expect profits to rise, strong 6-month momentum, strong 12-month momentum"
+  "why": "medium-term score 76: analysts expect profits to rise, strong 6-month momentum, sales growing fast"
  },
  "PDD": {
   "added": "2026-11-19",
@@ -426,13 +426,13 @@
  },
  "WDC": {
   "added": "2026-11-17",
-  "last_best": 69.0,
+  "last_best": 68.0,
   "name": "Western Digital Corporation",
   "sources": [
    "yahoo:growth_technology_stocks",
    "yahoo:undervalued_growth_stocks"
   ],
   "strikes": 0,
-  "why": "long-term score 69: high return on shareholders' money, strong 3-year track record, low debt"
+  "why": "long-term score 68: high return on shareholders' money, strong 3-year track record, low debt"
  }
 }
