@@ -1,14 +1,14 @@
 {
  "0099.KL": {
   "added": "2026-11-13",
-  "last_best": 85.0,
+  "last_best": 84.0,
   "name": "SCICOM",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "medium-term score 85: strong 12-month momentum, sales growing fast, strong 6-month momentum"
+  "why": "medium-term score 84: strong 12-month momentum, sales growing fast, strong 6-month momentum"
  },
  "0339.KL": {
   "added": "2026-11-20",
@@ -23,14 +23,14 @@
  },
  "0390.KL": {
   "added": "2026-11-23",
-  "last_best": 77.0,
+  "last_best": 76.0,
   "name": "ISF",
   "sources": [
    "yahoo:my_growth",
    "yahoo:my_momentum"
   ],
   "strikes": 0,
-  "why": "long-term score 77: insiders own a big stake, still small, so room to grow, high return on shareholders' money"
+  "why": "long-term score 76: insiders own a big stake, still small, so room to grow, high return on shareholders' money"
  },
  "4324.KL": {
   "added": "2026-11-13",
@@ -54,81 +54,80 @@
   "strikes": 0,
   "why": "medium-term score 75: strong 12-month momentum, sales growing fast, analysts expect profits to rise"
  },
- "7103.KL": {
-  "added": "2026-11-13",
-  "last_best": 69.0,
-  "name": "SPRITZER",
-  "sources": [
-   "yahoo:my_growth",
-   "yahoo:my_momentum"
-  ],
-  "strikes": 0,
-  "why": "short-term score 69: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
- },
  "A": {
   "added": "2026-11-25",
-  "last_best": 79.0,
+  "last_best": 78.0,
   "name": "Agilent Technologies, Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "Mentioned in Motley Fool articles"
   ],
   "strikes": 0,
-  "why": "short-term score 79: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
+  "why": "short-term score 78: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
  },
  "ALAB": {
   "added": "2026-11-13",
-  "last_best": 71.0,
+  "last_best": 70.0,
   "name": "Astera Labs, Inc.",
   "sources": [
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "long-term score 71: sales growing fast, low debt, strong 3-year track record"
+  "why": "long-term score 70: sales growing fast, low debt, strong 3-year track record"
+ },
+ "ANF": {
+  "added": "2026-11-27",
+  "last_best": 91.0,
+  "name": "Abercrombie & Fitch Company",
+  "sources": [
+   "yahoo:undervalued_growth_stocks"
+  ],
+  "strikes": 0,
+  "why": "short-term score 91: near its 52-week high, momentum turning up, trading above its 50-day trend"
  },
  "ATAT": {
   "added": "2026-11-16",
-  "last_best": 89.0,
+  "last_best": 87.0,
   "name": "Atour Lifestyle Holdings Limite",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "yahoo:hidden_growers"
   ],
   "strikes": 0,
-  "why": "short-term score 89: strong recent price rise, trading above its 50-day trend, momentum turning up"
+  "why": "short-term score 87: strong recent price rise, trading above its 50-day trend, near its 52-week high"
  },
  "BAX": {
   "added": "2026-11-18",
-  "last_best": 82.0,
+  "last_best": 78.0,
   "name": "Baxter International Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "Mentioned in Motley Fool articles"
   ],
   "strikes": 0,
-  "why": "short-term score 82: trading above its 50-day trend, strong recent price rise, near its 52-week high"
+  "why": "short-term score 78: near its 52-week high, trading above its 50-day trend, strong recent price rise"
  },
  "BBY": {
   "added": "2026-11-19",
-  "last_best": 81.0,
+  "last_best": 83.0,
   "name": "Best Buy Co., Inc.",
   "sources": [
    "yahoo:undervalued_growth_stocks",
    "yahoo:undervalued_large_caps"
   ],
   "strikes": 0,
-  "why": "short-term score 81: strong 3-month price rise, near its 52-week high, trading above its 50-day trend"
+  "why": "short-term score 83: strong 3-month price rise, near its 52-week high, trading above its 50-day trend"
  },
  "BIIB": {
   "added": "2026-11-17",
-  "last_best": 85.0,
+  "last_best": 84.0,
   "name": "Biogen Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "Mentioned in Motley Fool articles"
   ],
   "strikes": 0,
-  "why": "short-term score 85: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
+  "why": "short-term score 84: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
  },
  "CRDO": {
   "added": "2026-11-13",
@@ -142,46 +141,57 @@
  },
  "DELL": {
   "added": "2026-11-13",
-  "last_best": 72.0,
+  "last_best": 71.0,
   "name": "Dell Technologies Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 72: strong 12-month momentum, sales growing fast, profits growing fast"
+  "why": "medium-term score 71: strong 12-month momentum, sales growing fast, profits growing fast"
  },
  "DIS": {
   "added": "2026-11-20",
-  "last_best": 90.0,
+  "last_best": 88.0,
   "name": "Walt Disney Company (The)",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "Mentioned in Motley Fool articles"
   ],
   "strikes": 0,
-  "why": "short-term score 90: near its 52-week high, strong recent price rise, trading above its 50-day trend"
+  "why": "short-term score 88: near its 52-week high, strong recent price rise, trading above its 50-day trend"
  },
  "DRH": {
   "added": "2026-11-13",
-  "last_best": 79.0,
+  "last_best": 78.0,
   "name": "Diamondrock Hospitality Company",
   "sources": [
    "yahoo:undervalued_growth_stocks"
   ],
   "strikes": 0,
-  "why": "short-term score 79: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
+  "why": "short-term score 78: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
  },
  "EFC": {
   "added": "2026-11-24",
-  "last_best": 74.0,
+  "last_best": 72.0,
   "name": "Ellington Financial Inc.",
   "sources": [
    "OpenInsider: several insiders buying their own shares",
    "yahoo:aggressive_small_caps"
   ],
   "strikes": 0,
-  "why": "short-term score 74: momentum turning up, near its 52-week high, trading above its 50-day trend"
+  "why": "short-term score 72: momentum turning up, near its 52-week high, strong recent price rise"
+ },
+ "EMBC": {
+  "added": "2026-11-27",
+  "last_best": 85.0,
+  "name": "Embecta Corp.",
+  "sources": [
+   "yahoo:aggressive_small_caps",
+   "yahoo:undervalued_growth_stocks"
+  ],
+  "strikes": 0,
+  "why": "short-term score 85: strong 3-month price rise, trading above its 50-day trend, momentum turning up"
  },
  "EQH": {
   "added": "2026-11-13",
@@ -192,7 +202,7 @@
    "yahoo:undervalued_large_caps"
   ],
   "strikes": 0,
-  "why": "medium-term score 72: sales growing fast, strong 6-month momentum, above its long-term trend"
+  "why": "short-term score 72: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
  },
  "FRO": {
   "added": "2026-11-23",
@@ -207,36 +217,25 @@
  },
  "FTV": {
   "added": "2026-11-17",
-  "last_best": 77.0,
+  "last_best": 73.0,
   "name": "Fortive Corporation",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "Mentioned in Motley Fool articles"
   ],
   "strikes": 0,
-  "why": "short-term score 77: near its 52-week high, trading above its 50-day trend, strong recent price rise"
+  "why": "short-term score 73: near its 52-week high, trading above its 50-day trend, strong 3-month price rise"
  },
  "HGV": {
   "added": "2026-11-13",
-  "last_best": 80.0,
+  "last_best": 76.0,
   "name": "Hilton Grand Vacations Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "OpenInsider: several insiders buying their own shares"
   ],
   "strikes": 0,
-  "why": "short-term score 80: strong recent price rise, trading above its 50-day trend, strong 3-month price rise"
- },
- "HHH": {
-  "added": "2026-11-13",
-  "last_best": 69.0,
-  "name": "Howard Hughes Holdings Inc.",
-  "sources": [
-   "Dataroma: recently bought by a well-known 'superinvestor' fund",
-   "OpenInsider: several insiders buying their own shares"
-  ],
-  "strikes": 0,
-  "why": "short-term score 69: strong 3-month price rise, strong recent price rise, trading above its 50-day trend"
+  "why": "short-term score 76: strong recent price rise, trading above its 50-day trend, strong 3-month price rise"
  },
  "HMY": {
   "added": "2026-11-13",
@@ -257,32 +256,43 @@
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 76: strong 12-month momentum, profits growing fast, analysts expect profits to rise"
+  "why": "medium-term score 76: strong 12-month momentum, profits growing fast, sales growing fast"
  },
  "KSS": {
   "added": "2026-11-26",
-  "last_best": 92.0,
+  "last_best": 93.0,
   "name": "Kohl's Corporation",
   "sources": [
    "yahoo:undervalued_growth_stocks"
   ],
   "strikes": 0,
-  "why": "short-term score 92: strong 3-month price rise, near its 52-week high, trading above its 50-day trend"
+  "why": "short-term score 93: strong 3-month price rise, near its 52-week high, trading above its 50-day trend"
+ },
+ "LQDA": {
+  "added": "2026-11-27",
+  "last_best": 90.0,
+  "name": "Liquidia Corporation",
+  "sources": [
+   "Mentioned in Motley Fool articles",
+   "yahoo:hidden_growers"
+  ],
+  "strikes": 0,
+  "why": "long-term score 90: high profit margins, sales growing fast, strong 3-year track record"
  },
  "MET": {
   "added": "2026-11-13",
-  "last_best": 73.0,
+  "last_best": 74.0,
   "name": "MetLife, Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "yahoo:undervalued_large_caps"
   ],
   "strikes": 0,
-  "why": "short-term score 73: near its 52-week high, strong 3-month price rise, trading above its 50-day trend"
+  "why": "short-term score 74: near its 52-week high, strong 3-month price rise, strong recent price rise"
  },
  "MU": {
   "added": "2026-11-13",
-  "last_best": 78.0,
+  "last_best": 77.0,
   "name": "Micron Technology, Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
@@ -292,7 +302,7 @@
    "yahoo:undervalued_growth_stocks"
   ],
   "strikes": 0,
-  "why": "long-term score 78: sales growing fast, strong 3-year track record, high return on shareholders' money"
+  "why": "medium-term score 77: sales growing fast, strong 12-month momentum, analyst price targets well above today's price"
  },
  "P": {
   "added": "2026-11-19",
@@ -302,18 +312,18 @@
    "yahoo:growth_technology_stocks"
   ],
   "strikes": 0,
-  "why": "medium-term score 76: analysts expect profits to rise, strong 6-month momentum, strong 12-month momentum"
+  "why": "medium-term score 76: analysts expect profits to rise, strong 6-month momentum, above its long-term trend"
  },
  "PDD": {
   "added": "2026-11-19",
-  "last_best": 84.0,
+  "last_best": 83.0,
   "name": "PDD Holdings Inc.",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "Mentioned in Motley Fool articles"
   ],
   "strikes": 0,
-  "why": "short-term score 84: momentum turning up, rising trading volume, strong recent price rise"
+  "why": "short-term score 83: rising trading volume, momentum turning up, strong recent price rise"
  },
  "PENG": {
   "added": "2026-11-13",
@@ -345,7 +355,7 @@
    "yahoo:small_cap_gainers"
   ],
   "strikes": 0,
-  "why": "short-term score 76: trading above its 50-day trend, strong recent price rise, strong 3-month price rise"
+  "why": "short-term score 76: strong recent price rise, trading above its 50-day trend, strong 3-month price rise"
  },
  "SENS": {
   "added": "2026-11-16",
@@ -371,68 +381,57 @@
  },
  "SOPH": {
   "added": "2026-11-13",
-  "last_best": 68.0,
+  "last_best": 70.0,
   "name": "SOPHiA GENETICS SA",
   "sources": [
    "OpenInsider: several insiders buying their own shares",
    "yahoo:small_cap_gainers"
   ],
   "strikes": 0,
-  "why": "medium-term score 68: strong 6-month momentum, strong 12-month momentum, above its long-term trend"
+  "why": "medium-term score 70: strong 6-month momentum, strong 12-month momentum, above its long-term trend"
  },
  "TFX": {
   "added": "2026-11-13",
-  "last_best": 82.0,
+  "last_best": 77.0,
   "name": "Teleflex Incorporated",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "yahoo:hidden_growers"
   ],
   "strikes": 0,
-  "why": "short-term score 82: near its 52-week high, trading above its 50-day trend, strong recent price rise"
+  "why": "short-term score 77: near its 52-week high, strong recent price rise, trading above its 50-day trend"
  },
  "TGT": {
   "added": "2026-11-16",
-  "last_best": 91.0,
+  "last_best": 89.0,
   "name": "Target Corporation",
   "sources": [
    "Dataroma: recently bought by a well-known 'superinvestor' fund",
    "Mentioned in Motley Fool articles"
   ],
   "strikes": 0,
-  "why": "short-term score 91: strong recent price rise, momentum turning up, near its 52-week high"
+  "why": "short-term score 89: strong recent price rise, near its 52-week high, trading above its 50-day trend"
  },
  "ULCC": {
   "added": "2026-11-13",
-  "last_best": 88.0,
+  "last_best": 87.0,
   "name": "Frontier Group Holdings, Inc.",
   "sources": [
    "Mentioned in Motley Fool articles",
    "yahoo:aggressive_small_caps"
   ],
   "strikes": 0,
-  "why": "short-term score 88: strong recent price rise, trading above its 50-day trend, strong 3-month price rise"
+  "why": "short-term score 87: strong 3-month price rise, strong recent price rise, trading above its 50-day trend"
  },
  "UPBD": {
   "added": "2026-11-13",
-  "last_best": 89.0,
+  "last_best": 83.0,
   "name": "Upbound Group, Inc.",
   "sources": [
    "OpenInsider: several insiders buying their own shares",
    "yahoo:small_cap_gainers"
   ],
   "strikes": 0,
-  "why": "short-term score 89: strong recent price rise, trading above its 50-day trend, strong 3-month price rise"
- },
- "WDC": {
-  "added": "2026-11-17",
-  "last_best": 69.0,
-  "name": "Western Digital Corporation",
-  "sources": [
-   "yahoo:growth_technology_stocks",
-   "yahoo:undervalued_growth_stocks"
-  ],
-  "strikes": 0,
-  "why": "long-term score 69: strong 3-year track record, high return on shareholders' money, low debt"
+  "why": "short-term score 83: strong recent price rise, trading above its 50-day trend, strong 3-month price rise"
  }
 }
